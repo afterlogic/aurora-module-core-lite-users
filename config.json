@@ -1,0 +1,10 @@
+{
+    "Disabled": [
+		false,
+		"bool"
+	],
+    "DisabledModulesForLiteUsers": [
+		["Calendar", "Files", "CoreMobileWebclient"],
+		"array"
+	]
+}
