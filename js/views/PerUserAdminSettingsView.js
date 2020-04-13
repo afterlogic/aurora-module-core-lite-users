@@ -104,7 +104,7 @@ CCoreLiteUsersPerUserAdminSettingsView.prototype.setAccessLevel = function (sEnt
 	if (this.iUserId !== iEntityId)
 	{
 		this.iUserId = iEntityId;
-		this.requestNewData();
+		this.requestPerUserSettings();
 	}
 };
 
