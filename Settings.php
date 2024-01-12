@@ -11,7 +11,7 @@ use Aurora\System\SettingsProperty;
 
 /**
  * @property bool $Disabled
- * @property array $ContactsSortBy
+ * @property array $DisabledModulesForLiteUsers
  */
 
 class Settings extends \Aurora\System\Module\Settings
