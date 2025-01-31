@@ -79,7 +79,7 @@ class Module extends \Aurora\System\Module\AbstractModule
     {
         \Aurora\System\Api::checkUserRoleIsAtLeast(\Aurora\System\Enums\UserRole::SuperAdmin);
 
-        $oUser = \Aurora\Modules\Core\Module::Decorator()->GetUserWithoutRoleCheck($UserId);
+        $oUser = \Aurora\Api::getUserById($UserId);
         if ($oUser) {
             return array(
                 'IsLiteUser' => $oUser->getExtendedProp(self::GetName() . '::IsLite')
@@ -94,7 +94,7 @@ class Module extends \Aurora\System\Module\AbstractModule
         $bResult = false;
         \Aurora\System\Api::checkUserRoleIsAtLeast(\Aurora\System\Enums\UserRole::SuperAdmin);
 
-        $oUser = \Aurora\Modules\Core\Module::Decorator()->GetUserWithoutRoleCheck($UserId);
+        $oUser = \Aurora\Api::getUserById($UserId);
 
         if ($oUser) {
             $oUser->setExtendedProp(self::GetName() . '::IsLite', $IsLiteUser);
